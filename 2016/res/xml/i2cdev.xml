@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Robot type="FirstInspires-FTC" name="i2cTest">
+    <DeviceInterfaceModule name="Device Interface Module" serialNumber="AL00VCMD">
+        <I2cDevice name="nav" port="0" />
+        <I2cDevice name="ada" port="1" />
+    </DeviceInterfaceModule>
+</Robot>

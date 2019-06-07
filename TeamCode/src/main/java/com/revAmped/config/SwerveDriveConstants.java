@@ -1,0 +1,38 @@
+package com.revAmped.config;
+
+/**
+ * RevAmped 2018
+ */
+
+public interface SwerveDriveConstants {
+    //servo positions
+    float SERVO_LEFTFRONT_START = 90f/255f;
+    float SERVO_LEFTBACK_START = 162f/255f;
+    float SERVO_RIGHTFRONT_START = 170f/255f;
+    float SERVO_RIGHTBACK_START = 107f/255f;
+
+    float SERVO_LEFTFRONT_END = 222f/255f;
+    float SERVO_LEFTBACK_END = 38f/255f;
+    float SERVO_RIGHTFRONT_END = 40f/255f;
+    float SERVO_RIGHTBACK_END = 237f/255f;
+
+    //autonomous moving in diagonal
+    float SERVO_LEFTFRONT_CRABRIGHT = 155f/255f;
+    float SERVO_LEFTBACK_CRABRIGHT = 224f/255f;
+    float SERVO_RIGHTFRONT_CRABRIGHT = 235f/255f;
+    float SERVO_RIGHTBACK_CRABRIGHT = 172f/255f;
+
+    float SERVO_LEFTFRONT_CRABLEFT = 29f/255f;
+    float SERVO_LEFTBACK_CRABLEFT = 100f/255f;
+    float SERVO_RIGHTFRONT_CRABLEFT = 104f/255f;
+    float SERVO_RIGHTBACK_CRABLEFT = 49f/255f;
+
+    float SERVO_LEFTBACK_CURVE = 67/255f;
+    float SERVO_RIGHTFRONT_CURVE = 67/255f;
+
+    float SERVO_RIGHTFRONT_STRAFE_CURVE = 238/255f;
+    float SERVO_RIGHTBACK_STRAFE_CURVE = 184/255f;
+    float SERVO_LEFTFRONT_STRAFE_CURVE = 30/255f;
+    //THIS AREA MAY NEED CHANGE TO CALIBRATE THE CURVE
+    float SERVO_LEFTBACK_STRAFE_CURVE = 48/255f;
+}

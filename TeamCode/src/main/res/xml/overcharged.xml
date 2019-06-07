@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Robot type="FirstInspires-FTC">
+    <LynxUsbDevice name="Expansion Hub Portal 1" serialNumber="DQ1O0RWN" parentModuleAddress="3">
+        <LynxModule name="Expansion Hub 2" port="2">
+            <NeveRest20Gearmotor name="driveRF" port="0" />
+            <NeveRest20Gearmotor name="driveRB" port="1" />
+            <NeveRest20Gearmotor name="intakeR" port="2" />
+            <NeveRest40Gearmotor name="slideMotor" port="3" />
+            <Servo name="servoRF" port="0" />
+            <Servo name="servoRB" port="1" />
+            <Servo name="servoJewelKnocker" port="5"/>
+            <DigitalDevice name="switch_slide_down" port="0" />
+            <DigitalDevice name="switch_slide_up" port="1" />
+            <AnalogInput name="sonarRB" port="3"/>
+            <KauaiLabsNavxMicro name="imu2" port="0" bus="1" />
+        </LynxModule>
+        <LynxModule name="Expansion Hub 3" port="3">
+            <NeveRest20Gearmotor name="driveLF" port="0" />
+            <NeveRest20Gearmotor name="driveLB" port="1" />
+            <NeveRest20Gearmotor name="intakeL" port="2" />
+			<NeveRest20Gearmotor name="relicMotor" port="3" />
+            <Servo name="servoLF" port="0" />
+            <Servo name="servoLB" port="1" />
+            <Servo name="servoJewel" port="2" />
+            <Servo name="servoDumper" port="3" />
+            <Servo name="relicClaw" port="4" />
+            <Servo name="relicElbow" port="5" />
+            <DigitalDevice name="led_white" port="0" />
+            <DigitalDevice name="led_green" port="1" />
+            <DigitalDevice name="led_yellow" port="2" />
+            <DigitalDevice name="led_red" port="3" />
+            <DigitalDevice name="led_blue" port="4" />
+            <DigitalDevice name="switch_relic_in" port="7" />
+            <LynxColorSensor name="jewel_color" port="0" bus="1" />
+            <AnalogInput name="sonarLS" port="2"/>
+            <AnalogInput name="sonarLF" port="3"/>
+        </LynxModule>
+    </LynxUsbDevice>
+</Robot>

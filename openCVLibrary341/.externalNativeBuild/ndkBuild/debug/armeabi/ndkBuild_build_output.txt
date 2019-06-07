@@ -1,0 +1,8 @@
+Android NDK: OpenCV: You should ignore warning about 'non-system libraries in linker flags' and 'opencv_java' library.    
+Android NDK:         'OPENCV_INSTALL_MODULES:=on' can be used to build APK with included OpenCV binaries    
+md "C:\Users\swang4\revampedcv\openCVLibrary341\build\intermediates\ndkBuild\debug\lib\armeabi" >NUL 2>NUL || rem
+C:/Users/swang4/AppData/Local/Android/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [armeabi] "Gdbserver      ": "[arm-linux-androideabi] C:\Users\swang4\revampedcv\openCVLibrary341\build\intermediates\ndkBuild\debug\lib/armeabi/gdbserver"
+copy /b/y "C:\Users\swang4\AppData\Local\Android\sdk\ndk-bundle\build\\..\prebuilt\android-arm\gdbserver\gdbserver" "C:\Users\swang4\revampedcv\openCVLibrary341\build\intermediates\ndkBuild\debug\lib\armeabi\gdbserver" > NUL
+C:/Users/swang4/AppData/Local/Android/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe [armeabi] "Gdbsetup       ": "C:\Users\swang4\revampedcv\openCVLibrary341\build\intermediates\ndkBuild\debug\lib/armeabi/gdb.setup"
+C:/Users/swang4/AppData/Local/Android/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe "set solib-search-path C:/Users/swang4/revampedcv/openCVLibrary341/build/intermediates/ndkBuild/debug/obj/local/armeabi" > C:\Users\swang4\revampedcv\openCVLibrary341\build\intermediates\ndkBuild\debug\lib/armeabi/gdb.setup
+C:/Users/swang4/AppData/Local/Android/sdk/ndk-bundle/build//../prebuilt/windows-x86_64/bin/echo.exe "directory C:/Users/swang4/AppData/Local/Android/sdk/ndk-bundle/build//../sysroot C:/Users/swang4/AppData/Local/Android/sdk/ndk-bundle/build//../sources/cxx-stl/system" >> C:\Users\swang4\revampedcv\openCVLibrary341\build\intermediates\ndkBuild\debug\lib/armeabi/gdb.setup

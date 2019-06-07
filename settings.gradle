@@ -1,0 +1,4 @@
+include ':FtcRobotController', ':core', ':gui', ':plugin'
+include ':TeamCode'
+
+include ':openCVLibrary341'

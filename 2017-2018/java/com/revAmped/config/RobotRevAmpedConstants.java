@@ -1,0 +1,42 @@
+package com.revAmped.config;
+
+/**
+ * Shared robot constants (i.e. switch addreses, servo presets, etc)
+ */
+public interface RobotRevAmpedConstants
+        extends RobotConstants
+{
+
+    //servo positions  --
+
+    float POWER_SPINNER = 0.80f;
+    float POWER_SWEEPER = 1.0f;
+
+    float SLIDE_ENCODER_MAX = 5000;
+    int SLIDE_SPACING = 100;
+
+    int SLIDE_LEVEL_TWO = 900;
+    int SLIDE_LEVEL_THREE = 1800;
+
+    float SERVO_STICK_UP = 115f/255f, SERVO_STICK_OUT = 175f/225f,SERVO_STICK_OUT_2 = 220f/255f, SERVO_STICK_IN = 10f/255f;
+    float SERVO_DUMPER_CLAW_OUT = 126f/255f, SERVO_DUMPER_CLAW_IN = 50f/255f, SERVO_DUMPER_CLAW_MAX_OUT = 160f/255f;
+
+    float SERVO_CLAW_LEFT_IN = 190f/255f, SERVO_CLAW_LEFT_OUT = 125f/255f;
+    float SERVO_CLAW_LEFT_RELEASE = 170f/255f;
+
+    float SERVO_CLAW_RIGHT_IN = 180f/255f, SERVO_CLAW_RIGHT_OUT = 110f/255f;
+    float SERVO_CLAW_RIGHT_RELEASE = 160f/255f;
+
+    float SERVO_RELIC_ELBOW_UP = 111f/255f, SERVO_RELIC_ELBOW_DOWN = 78f/255f;
+    float SERVO_RELIC_ELBOW_REST = 125f/255f;
+
+    float SERVO_RELIC_CLAW_GRAB = 165f/255f, SERVO_RELIC_CLAW_DROP = 183f/255f, SERVO_RELIC_CLAW_OPEN = 205f/255f;
+    float SERVO_RELIC_CLAW_REST = 146f/255f, SERVO_RELIC_CLAW_WIDEOPEN = 230f/255f;
+
+    float SERVO_JEWEL_IN = 60f/255f, SERVO_JEWEL_OUT = 196f/255f, SERVO_CRYPTOBOX_NEAR = 120f/255f;
+    float SERVO_HIT_RIGHT = 86f/255f, SERVO_HIT_LEFT = 182f/255f, SERVO_DETECT = 132f/255f;
+
+    float SERVO_DOOR_IN = 13f/255f, SERVO_DOOR_OUT = 251f/255f, SERVO_DOOR_INTAKE = 170f/255f;
+    float SERVO_CONTAINER_DOWN = 255/255f, SERVO_CONTAINER_UP = 108f/255f, SERVO_CONTAINER_FLAT = 163f/255f, SERVO_CONTAINER_FLATA = 222f/255f
+            , SERVO_CONTAINER_DUMP = 90f/255f;
+}

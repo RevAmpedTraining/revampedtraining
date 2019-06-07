@@ -1,0 +1,10 @@
+{
+  "buildFiles": [
+    "C:\\Users\\swang4\\Downloads\\opencv-3.4.1-android-sdk\\OpenCV-android-sdk\\sdk\\native\\jni\\OpenCV.mk"
+  ],
+  "cleanCommands": [],
+  "libraries": {},
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

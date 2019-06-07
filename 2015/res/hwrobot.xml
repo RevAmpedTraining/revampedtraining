@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Robot type="FirstInspires-FTC">
+    <ServoController name="Servo Controller 1" serialNumber="AL00VDBU">
+        <Servo name="servo_climber" port="1" />
+        <Servo name="servo_wingr" port="3" />
+        <Servo name="servo_bdoor" port="4" />
+        <Servo name="servo_hookr" port="6" />
+    </ServoController>
+    <MotorController name="Motor Controller 4" serialNumber="AL00UVMM">
+        <Motor name="motor_ro" port="1" />
+        <Motor name="motor_sr" port="2" />
+    </MotorController>
+    <MotorController name="Motor Controller 3" serialNumber="AL00XQJ7">
+        <Motor name="motor_rf" port="1" />
+        <Motor name="motor_rb" port="2" />
+    </MotorController>
+    <MotorController name="Motor Controller 5" serialNumber="AL00VGYW">
+        <Motor name="motor_lf" port="1" />
+        <Motor name="motor_lb" port="2" />
+    </MotorController>
+    <ServoController name="Servo Controller 2" serialNumber="AI02QTKT">
+        <Servo name="servo_hookl" port="1" />
+        <Servo name="servo_bucket" port="3" />
+        <Servo name="servo_beacon" port="4" />
+        <Servo name="servo_slide" port="6" />
+    </ServoController>
+    <DeviceInterfaceModule name="Device Interface Module" serialNumber="AL00VEO9">
+        <ColorSensor name="color_lo" port="0" />
+        <ColorSensor name="color_li" port="1" />
+        <ColorSensor name="color_ri" port="2" />
+        <ColorSensor name="color_ro" port="3" />
+        <Gyro name="gyro_sensor" port="5" />
+    </DeviceInterfaceModule>
+    <MotorController name="Motor Controller 2" serialNumber="AL00XQJ5">
+        <Motor name="motor_sl" port="2" />
+    </MotorController>
+    <ServoController name="Servo Controller 3" serialNumber="AL00VDI1">
+        <Servo name="servo_bturn" port="1" />
+        <Servo name="servo_wingl" port="3" />
+        <Servo name="servo_fdoor" port="6" />
+    </ServoController>
+</Robot>

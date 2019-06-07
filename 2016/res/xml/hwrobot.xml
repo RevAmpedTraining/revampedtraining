@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Robot type="FirstInspires-FTC">
+    <MotorController name="Motor Controller 1" serialNumber="AL00VUY3">
+        <Motor name="gunL" port="1" />
+        <Motor name="driveLB" port="2" />
+    </MotorController>
+    <MotorController name="Motor Controller 3" serialNumber="AL00UVMM">
+        <Motor name="slide" port="1" />
+        <Motor name="driveRB" port="2" />
+    </MotorController>
+    <ServoController name="Servo Controller 2" serialNumber="AL00VE3K">
+        <Servo name="servoRF" port="1" />
+        <Servo name="servoTG" port="3" />
+        <Servo name="servoRB" port="6" />
+    </ServoController>
+    <MotorController name="Motor Controller 6" serialNumber="AL00VGYW">
+        <Motor name="driveLF" port="1" />
+        <Motor name="roller" port="2" />
+    </MotorController>
+    <MotorController name="Motor Controller 4" serialNumber="AH00QJ45">
+        <Motor name="gunR" port="1" />
+        <Motor name="driveRF" port="2" />
+    </MotorController>
+    <ServoController name="Servo Controller 5" serialNumber="AL00VDI1">
+        <Servo name="servoLB" port="1" />
+        <Servo name="servoBC" port="3" />
+        <Servo name="servoCB" port="4" />
+        <Servo name="servoLF" port="6" />
+    </ServoController>
+    <DeviceInterfaceModule name="Device Interface Module" serialNumber="AL00VCMD">
+        <I2cDevice name="gyro_sensor" port="0" />
+        <I2cDevice name="mux" port="1" />
+        <I2cDevice name="color_sensor" port="2" />
+    </DeviceInterfaceModule>
+</Robot>

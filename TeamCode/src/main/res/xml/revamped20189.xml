@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Robot type="FirstInspires-FTC">
+    <LynxUsbDevice name="Expansion Hub Portal 1" serialNumber="DQ2F630H" parentModuleAddress="1">
+        <LynxModule name="Expansion Hub 2" port="2">
+            <NeveRest20Gearmotor name="driveRB" port="0" />
+            <NeveRest20Gearmotor name="driveRF" port="1" />
+            <Motor name="motorSlide" port="2" />
+            <NeveRest40Gearmotor name="motorPopper" port="3" />
+            <Servo name="servoRF" port="0" />
+            <Servo name="servoRB" port="1" />
+            <Servo name="servoDump" port="3" />
+            <Servo name="servoLatch" port="4" />
+            <LynxEmbeddedIMU name="imu" port="0" bus="0" />
+            <DigitalDevice name="switch_slideup" port="0" />
+            <DigitalDevice name="switch_slidein" port="1" />
+            <DigitalDevice name="switch_slidedown" port="2" />
+
+        </LynxModule>
+        <LynxModule name="Expansion Hub 3" port="3">
+            <NeveRest20Gearmotor name="driveLB" port="0" />
+            <NeveRest20Gearmotor name="driveLF" port="1" />
+            <NeveRest40Gearmotor name="motorIntake" port="2" />
+            <Motor name="latchMotor" port="3" />
+            <Servo name="servoLB" port="0" />
+            <Servo name="servoLF" port="1" />
+            <Servo name="servoTM" port="2" />
+            <ContinuousRotationServo name="servoTelescopeL" port="3" />
+            <ContinuousRotationServo name="servoTelescopeR" port="4" />
+            <DigitalDevice name="led_yellow" port="3" />
+            <DigitalDevice name="led_blue" port="1" />
+            <DigitalDevice name="led_green" port="2" />
+            <DigitalDevice name="led_red" port="0" />
+            <DigitalDevice name="led_white" port="4" />
+        </LynxModule>
+    </LynxUsbDevice>
+</Robot>

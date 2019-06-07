@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Robot type="FirstInspires-FTC">
+    <LynxUsbDevice name="Expansion Hub Portal 1" serialNumber="DQ1O4ENM" parentModuleAddress="2">
+        <LynxModule name="Expansion Hub 2" port="2">
+            <NeveRest40Gearmotor name="motor_lf" port="0" />
+            <NeveRest40Gearmotor name="motor_lb" port="1" />
+            <NeveRest20Gearmotor name="motor_sl" port="2" />
+            <NeveRest20Gearmotor name="motor_relic_slide" port="3" />
+            <Servo name="servo_jewel" port="4" />
+            <Servo name="servo_jewelhit" port = "5" />
+            <Servo name="servo_stick" port="3" />
+            <Servo name="servo_dumper_claw" port="2" />
+            <Servo name="servo_relic_elbow" port="1" />
+            <DigitalDevice name="led_green" port="4" />
+            <DigitalDevice name="led_white" port="0" />
+            <DigitalDevice name="led_yellow" port="2" />
+            <DigitalDevice name="led_red" port="1" />
+            <DigitalDevice name="led_blue" port="3" />
+            <DigitalDevice name="door_switch" port="6" />
+            <LynxColorSensor name="jewel_color" port="0" bus="2" />
+            <LynxColorSensor name="sensor_front" port="0" bus="1" />
+            <ModernRoboticsI2cRangeSensor name="range_stick" port="0" bus="3" />
+            <AnalogInput name="sonar_l" port="0"/>
+        </LynxModule>
+        <LynxModule name="Expansion Hub 3" port="3">
+            <NeveRest40Gearmotor name="motor_rf" port="0" />
+            <NeveRest40Gearmotor name="motor_rb" port="1" />
+            <NeveRest20Gearmotor name="motor_sr" port="2" />
+            <NeveRest20Gearmotor name="motor_slide" port="3" />
+            <Servo name="servo_cr" port="0" />
+            <Servo name="servo_dr" port="1" />
+            <Servo name="servo_relic_claw" port="2" />
+            <DigitalDevice name="switch_slideup" port="0" />
+            <DigitalDevice name="switch_slidedown" port="1" />
+            <DigitalDevice name="switch_relic_slidein" port="2" />
+            <LynxColorSensor name="sensor_back" port="0" bus="2" />
+            <KauaiLabsNavxMicro name="imu3" port="0" bus="3" />
+            <AnalogInput name="sonar_rf" port="1"/>
+            <AnalogInput name="sonar_r" port="2"/>
+        </LynxModule>
+    </LynxUsbDevice>
+</Robot>

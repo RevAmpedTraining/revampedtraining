@@ -1,0 +1,28 @@
+package com.revAmped.components;
+
+/**
+ * Turn type
+ */
+public enum TurnType {
+    FORWARD,
+    STRAFE,
+    TURN_REGULAR,
+    TURN_LEFT_PIVOT,
+    TURN_RIGHT_PIVOT,
+    TURN_SWERVE_FWD_TURN,
+    TURN_SWERVE_FWD_TURN2,
+    TURN_SWERVE_SIDE_TURN,
+    TURN_SWERVE_SIDE_TURN2,
+    STRAFE_LEFT_DIAG,
+    STRAFE_RIGHT_DIAG,
+    SLIGHT_RIGHT_DIAG,
+    DIAG_RIGHT,
+    DIAG_LEFT,
+    FORWARD_RIGHT,
+    FORWARD_RIGHT_DS,
+    FORWARD_LEFT,
+    FORWARD_TM,
+    CURVE,
+    LEFT_CURVE,
+    LEFT_CURVE_1
+}
