@@ -22,6 +22,7 @@ public class ButtonTest extends OpMode
         if(Math.abs(x2) >= 0.15 && BTN_X.canPress6Short(timestamp)) {
             f -= 0.015f * x2;
         }
+        telemetry.addData("alksjdfaf", "adf");
 
         this.telemetry.addData("Back", this.gamepad1.back);
         this.telemetry.addData("LBumper", this.gamepad1.left_bumper);
