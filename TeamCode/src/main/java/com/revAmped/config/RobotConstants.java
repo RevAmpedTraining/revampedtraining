@@ -5,6 +5,7 @@ package com.revAmped.config;
  */
 public interface RobotConstants {
 
+
     class COLOR_SENSOR {
         public int channel;
         public COLOR_SENSOR(int i) { channel = i; }
