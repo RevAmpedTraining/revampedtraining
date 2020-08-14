@@ -1,21 +1,23 @@
-package
+package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
-public class LinearOpModeFirstAttempt extends LinearOpMode{
+public class LinearOpModeFirstAttempt extends LinearOpMode {
 
-    private DcMotor
+    private DcMotor motor;
+    private ElapsedTime elapsedTime;
 
-    @override
     public void runOpMode() {
-        motor = hardwareMap.get(DcMotor.class, "motor");
+        DcMotor motor = hardwareMap.get(DcMotor.class, "motor");
 
-        void waitforstart();
+        ();
 
         while (runOpModeIsActive())
             motor.setpower(0.5f);
     }
 
-    }
+}
 
 }
