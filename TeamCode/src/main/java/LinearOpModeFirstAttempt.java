@@ -1,3 +1,5 @@
+package
+
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 public class LinearOpModeFirstAttempt extends LinearOpMode{
