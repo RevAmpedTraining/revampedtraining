@@ -1,9 +1,9 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.MotorTest;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-public class LinearOpModeMotor extends LinearOpMode {
+public class AviLinearOpModeMotor extends LinearOpMode {
 
     private DcMotor motor = null;
 
