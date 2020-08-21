@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-public class LinearOpModeMotorFirstAttempt extends LinearOpMode {
+public class LinearOpModeMotor_FirstAttempt_NeilSurya extends LinearOpMode {
 
     private DcMotor motor;
     private ElapsedTime elapsedTime;
