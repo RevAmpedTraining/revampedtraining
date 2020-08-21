@@ -12,12 +12,8 @@ public class LinearOpModeMotorFirstAttempt extends LinearOpMode {
     public void runOpMode() {
         DcMotor motor = hardwareMap.get(DcMotor.class, "motor");
 
-        ();
-
-        while (runOpModeIsActive())
-            motor.setpower(0.5f);
+        //while (runOpModeIsActive())
+        //motor.setpower(0.5f);
     }
-
-}
 
 }
