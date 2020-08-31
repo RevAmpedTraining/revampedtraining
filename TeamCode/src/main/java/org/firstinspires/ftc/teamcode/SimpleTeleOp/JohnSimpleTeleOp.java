@@ -38,7 +38,7 @@ public class JohnSimpleTeleOp extends OpMode {
         float x2 = Range.clip(gamepad1.right_stick_x, -1, 1);
         float y2 = Range.clip(gamepad1.right_stick_y, -1, 1);
         //since y1 and y2 are both positive, we want to go forward
-        /*if (y1 > 0 && y2 > 0) {
+        if (y1 > 0 && y2 > 0) {
             driveRF.setPower(y2);
             driveRB.setPower(y2);
             driveLF.setPower(y1);
@@ -57,17 +57,17 @@ public class JohnSimpleTeleOp extends OpMode {
             driveRB.setPower(y2);
             driveLF.setPower(y1);
             driveLB.setPower(y1);
-        }*/
+        }
 
         if (/*if we want to strafe, then enter this block*/Math.abs(x1) > 0.5f && Math.abs(x2) > 0.5f && Math.abs(y1) < 0.5f && Math.abs(y2) < 0.5f) {
             //strafing code
             //if x1 is positive and x2 is positive, then strafe right
             //if both are negative, strafe left
 
-            //driveRF.setPower();
-            //driveRB.setPower();
-            //driveLF.setPower();
-            //driveLB.setPower();
+            driveRF.setPower(-x2);
+            driveRB.setPower(x2);
+            driveLF.setPower(x1);
+            driveLB.setPower(-x1);
         } else {
             driveRF.setPower(y2);
             driveRB.setPower(y2);
