@@ -10,7 +10,7 @@ import com.revAmped.components.RobotEncoderTest;
 import com.vuforia.ViewerParameters;
 
 @TeleOp(name = "John TeleOp", group = "TeleOp")
-public class JohnMecanumTeleOp extends OpMode {
+public class JohnMecanum extends OpMode {
 
     private RobotEncoderTest robot;
     private MecanumDrive drive;
