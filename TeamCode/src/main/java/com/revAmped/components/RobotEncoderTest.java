@@ -1,21 +1,12 @@
 package com.revAmped.components;
 
-import com.qualcomm.hardware.rev.Rev2mDistanceSensor;
-import com.qualcomm.robotcore.hardware.AnalogInput;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import com.qualcomm.robotcore.hardware.DistanceSensor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-import com.qualcomm.robotcore.robot.Robot;
 import com.qualcomm.robotcore.util.RobotLog;
-import com.revAmped.config.RobotRevAmpedConstants;
 
 import org.firstinspires.ftc.robotcore.external.Telemetry;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class RobotEncoderTest {
 
