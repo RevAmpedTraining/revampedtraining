@@ -8,6 +8,8 @@ import com.revAmped.components.Button;
 import com.revAmped.components.MecanumDrive;
 import com.revAmped.components.RobotEncoderTest;
 
+import org.firstinspires.ftc.teamcode.SimpleTeleOp.SimpleTeleOp_Neil;
+
 @TeleOp (name = "Neil TeleOp", group = "TeleOp")
 public class MecanumTeleOp_Neil extends OpMode {
 
@@ -45,12 +47,14 @@ public class MecanumTeleOp_Neil extends OpMode {
 
         float x1 = Range.clip(gamepad1.left_stick_x, -1, 1);
         float y1 = Range.clip(gamepad1.left_stick_y, -1, 1);
+
         float x2 = Range.clip(gamepad1.right_stick_x, -1, 1);
         float y2 = Range.clip(gamepad1.right_stick_y, -1, 1);
 
         if (slowMode) {
             x1 *= SLOW_MULT;
             x2 *= SLOW_MULT;
+
             y1 *= SLOW_MULT;
             y2 *= SLOW_MULT;
         }
@@ -64,7 +68,7 @@ public class MecanumTeleOp_Neil extends OpMode {
 
         } else {
             if (Math.abs(x1) > 0.25 && Math.abs(x2) > 0.25 && Math.abs(y1) < 0.1 && Math.abs(y2) < 0.1 && Math.signum(x1) == Math.signum(x2)) {
-                drive.setStrafePower((x1+x2) / 2);
+                drive.setStrafePower ((x1 + x2) / 2);
 
             } else {
                 drive.setPower(-y1, y2);
