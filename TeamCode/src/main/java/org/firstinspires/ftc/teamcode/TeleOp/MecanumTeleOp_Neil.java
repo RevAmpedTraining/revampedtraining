@@ -79,7 +79,8 @@ public class MecanumTeleOp_Neil extends OpMode {
 
     @Override
     public void stop() {
-       robot.close();
+        robot.close();
+
     }
 
 }
