@@ -63,7 +63,7 @@ public class AviTeleOp extends OpMode {
                 driveRB.setPower(x2); // right back motor goes forwards
             }
             else if (x1 < 0 && x2 < 0) { // strafe left
-                driveLF.setPower(x1); 
+                driveLF.setPower(x1);
                 driveLB.setPower(-x1);
                 driveRF.setPower(-x2);
                 driveRB.setPower(x2);
