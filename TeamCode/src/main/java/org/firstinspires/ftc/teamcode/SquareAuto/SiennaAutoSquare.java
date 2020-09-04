@@ -1,11 +1,14 @@
 package org.firstinspires.ftc.teamcode.SquareAuto;
 
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-public class SiennaAutoSquare extends LinearOpMode {
+public class SiennaAutoSquare extends OpMode {
 
-    private DcMotor motor;
+    public DcMotor driveRF;
+    public DcMotor driveRB;
+    public DcMotor driveLF;
+    public DcMotor driveLB;
 
 
 }
