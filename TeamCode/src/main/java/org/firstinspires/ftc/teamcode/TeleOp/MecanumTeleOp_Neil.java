@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.TeleOp;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -10,7 +11,7 @@ import com.revAmped.components.MecanumDrive;
 import com.revAmped.components.RobotEncoderTest;
 
 import org.firstinspires.ftc.teamcode.SimpleTeleOp.SimpleTeleOp_Neil;
-
+@Disabled
 @TeleOp (name = "Neil TeleOp", group = "TeleOp")
 public class MecanumTeleOp_Neil<SERVO_OPEN> extends OpMode {
 

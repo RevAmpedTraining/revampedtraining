@@ -8,10 +8,10 @@ import com.qualcomm.robotcore.util.Range;
 import com.revAmped.components.Button;
 import com.revAmped.components.MecanumDrive;
 import com.revAmped.components.RobotEncoderTest;
-import com.vuforia.ViewerParameters;
+
 @Disabled
-@TeleOp(name = "John TeleOp", group = "TeleOp")
-public class JohnMecanumTeleOp extends OpMode {
+@TeleOp(name = "Ekansh TeleOp", group = "TeleOp")
+public class EkanshMecanumTeleOp extends OpMode {
 
     private RobotEncoderTest robot;
     private MecanumDrive drive;
@@ -25,20 +25,21 @@ public class JohnMecanumTeleOp extends OpMode {
     private final float SLOW_MULT = 0.4f;
 
     @Override
-    public void init() {
-        robot = new RobotEncoderTest(this, false);
-        drive = robot.getMecanumDrive();
+    public void init(){
+    robot = new RobotEncoderTest(this, false);
+    drive = robot.getMecanumDrive();
 
-        gamepad1.reset();
-        gamepad1.setJoystickDeadzone(0.1f);
-        gamepad2.reset();
-        gamepad2.setJoystickDeadzone(0.1f);
+    gamepad1.reset();
+    gamepad1.setJoystickDeadzone(0.1f);
+    gamepad2.reset();
+    gamepad2.setJoystickDeadzone(0.1f);
 
-        drive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        drive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+    drive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+    drive.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
-        telemetry.addLine("Ready to start");
-        telemetry.update();
+    telemetry.addLine("Ready To Start");
+    telemetry.update();
+
     }
 
     @Override
@@ -74,6 +75,6 @@ public class JohnMecanumTeleOp extends OpMode {
 
     @Override
     public void stop() {
-       robot.close();
+        robot.close();
     }
 }
