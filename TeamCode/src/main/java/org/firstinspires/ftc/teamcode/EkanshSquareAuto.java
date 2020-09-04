@@ -1,0 +1,83 @@
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.revAmped.components.MecanumDrive;
+import com.revAmped.components.RobotEncoderTest;
+
+public class EkanshSquareAuto extends LinearOpMode {
+
+    private DcMotor drivelf;
+    private DcMotor drivelb;
+    private DcMotor driverf;
+    private DcMotor driverb;
+
+    private RobotEncoderTest robot;
+
+    @Override
+    public void runOpMode() throws InterruptedException {
+        drivelf = hardwareMap.get(DcMotor.class, "lf");
+        drivelb = hardwareMap.get(DcMotor.class, "lb");
+        driverf = hardwareMap.get(DcMotor.class, "rf");
+        driverb = hardwareMap.get(DcMotor.class, "rb");
+
+        drivelf.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        drivelb.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        driverf.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        driverb.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
+        waitForStart();
+    }
+
+    public void driveStraight(double power){
+        drivelf.setPower(power);
+        drivelb.setPower(power);
+        driverf.setPower(power);
+        driverb.setPower(power);
+    }
+
+    public void driveSideways(double power){
+        drivelf.setPower(power);
+        drivelb.setPower(-power);
+        driverf.setPower(-power);
+        driverb.setPower(power);
+    }
+
+    public void stopDriving(){
+        driveStraight(0);
+        driveSideways(0);
+    }
+
+    public void driveWithEncoder(double power, int distance){
+        drivelf.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        drivelb.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        driverf.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        driverb.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+        drivelf.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        drivelb.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        driverf.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        driverb.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
+        drivelf.setTargetPosition(10);
+        drivelb.setTargetPosition(10);
+        driverf.setTargetPosition(10);
+        driverb.setTargetPosition(10);
+
+
+        driveStraight(0.6); //go forward
+        driveSideways(0.84);//go right bigger number bc of mecanum strafe
+        driveStraight(-0.6);//go back
+        driveSideways(-0.84);//go left bigger number bc of mecanum strafe
+
+        while(drivelf.isBusy() && drivelb.isBusy() && driverf.isBusy() && driverb.isBusy()){
+
+        }
+
+        stopDriving();
+
+    }
+
+}
+
+
