@@ -47,10 +47,10 @@ public class EkanshSimpleTeleOp extends OpMode {
             driveLB.setPower(y1);
         }
         else if (Math.signum(y1) != Math.signum(y2) && (y1 != 0) && (y2 != 0));
-            driveRF.setPower(y2);
+            driveRF.setPower(-y2);
             driveRB.setPower(y2);
             driveLF.setPower(y1);
-            driveLB.setPower(y1);
+            driveLB.setPower(-y1);
     }
     @Override
     public void stop() {
