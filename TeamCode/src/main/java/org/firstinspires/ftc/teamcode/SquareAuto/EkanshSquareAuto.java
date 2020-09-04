@@ -27,6 +27,8 @@ public class EkanshSquareAuto extends LinearOpMode {
         driverb.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         waitForStart();
+
+        driveWithEncoder(0.6f, 10);
     }
 
     public void driveStraight(double power){
@@ -59,16 +61,16 @@ public class EkanshSquareAuto extends LinearOpMode {
         driverf.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         driverb.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        drivelf.setTargetPosition(10);
-        drivelb.setTargetPosition(10);
-        driverf.setTargetPosition(10);
-        driverb.setTargetPosition(10);
+        drivelf.setTargetPosition(distance);
+        drivelb.setTargetPosition(distance);
+        driverf.setTargetPosition(distance);
+        driverb.setTargetPosition(distance);
 
 
-        driveStraight(0.6); //go forward
-        driveSideways(0.84);//go right bigger number bc of mecanum strafe
-        driveStraight(-0.6);//go back
-        driveSideways(-0.84);//go left bigger number bc of mecanum strafe
+        driveStraight(power); //go forward
+        driveSideways(1.4 * power);//go right bigger number bc of mecanum strafe
+        driveStraight(-power);//go back
+        driveSideways(-1.4 * power);//go left bigger number bc of mecanum strafe
 
         while(drivelf.isBusy() && drivelb.isBusy() && driverf.isBusy() && driverb.isBusy()){
 
