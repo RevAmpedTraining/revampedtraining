@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 import com.revAmped.components.Button;
 import com.revAmped.components.MecanumDrive;
@@ -14,14 +15,22 @@ public class JoannaMecanumTeleOp extends OpMode {
 
     private RobotEncoderTest robot;
     private MecanumDrive drive;
-
+    // booleans
     private boolean slowMode = false;
     private boolean tankMode = false;
-
+   // private boolean servoOpen = false;
+    // buttons
     private Button slow = new Button();
     private Button tank = new Button();
+    //private Button servo = new Button();
+    //slowmode multiplier
+    private final float SLOW_MULT= 0.4f;
+    // constants
+    private final float SERVO_OPEN = 50/255f;
+    private final float SERVO_CLOSE = 150/255f;
 
-    private final float Slow_Mult = 0.4f;
+    Servo hypotheticalServo = hardwareMap.get(Servo.class, "servo");
+
 
     @Override
     public void init(){
@@ -47,29 +56,35 @@ public class JoannaMecanumTeleOp extends OpMode {
         float x2 = Range.clip(gamepad2.right_stick_x, -1, 1);
         float y2 = Range.clip (gamepad2.right_stick_y, -1, 1);
         if (slowMode) {
-            x1 *= Slow_Mult;
-            x2 *= Slow_Mult;
-            y1 *= Slow_Mult;
-            y2 *= Slow_Mult;
+            x1 *= SLOW_MULT;
+            x2 *= SLOW_MULT;
+            y1 *= SLOW_MULT;
+            y2 = SLOW_MULT;
 
         }
         if (gamepad1.a && slow.canPress(timestamp)) slowMode = !slowMode;
 
         if (gamepad1.b && tank.canPress (timestamp)) tankMode = !tankMode;
 
+        //if (gamepad2.x && servo.canPress(timestamp)) servoOpen = !servoOpen;
+
         if (tankMode){
             drive.setPower(-y1, y2);
         } else {
-            if (Math.abs(x1) > 0.25 && Math.abs(y1) < 0.1 && Math.abs(y2) < 0.1 && Math.signum(x1) == Math.signum(x2)) {
+            if (Math.abs(x1) > 0.25 && Math.abs(x2) > 0.25 && Math.abs(y1) < 0.1 && Math.abs(y2) < 0.1 && Math.signum (x1) == Math.signum(x2)) {
                 drive.setStrafePower((x1 + x2) / 2);
             } else {
                 drive.setPower(-y1, y2);
             }
         }
+        //control a servo with button x on gamepad 2
+
+       // hypotheticalServo.setPosition(servoOpen? SERVO_OPEN : SERVO_CLOSE);
     }
 
     @Override
     public void stop(){
+
         robot.close();
     }
 
