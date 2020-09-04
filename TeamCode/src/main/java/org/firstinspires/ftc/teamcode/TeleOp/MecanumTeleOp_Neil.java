@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 import com.revAmped.components.Button;
 import com.revAmped.components.MecanumDrive;
@@ -12,18 +13,25 @@ import com.revAmped.components.RobotEncoderTest;
 import org.firstinspires.ftc.teamcode.SimpleTeleOp.SimpleTeleOp_Neil;
 @Disabled
 @TeleOp (name = "Neil TeleOp", group = "TeleOp")
-public class MecanumTeleOp_Neil extends OpMode {
+public class MecanumTeleOp_Neil<SERVO_OPEN> extends OpMode {
 
     private RobotEncoderTest robot;
     private MecanumDrive drive;
 
     private boolean slowMode = false;
     private boolean tankMode = false;
+    private boolean servoOpen = false;
 
     private Button slow = new Button();
     private Button tank = new Button();
+    private Button servo = new Button();
 
-    private final float SLOW_MULT = 0.45f;
+    private final float SLOW_MULT = 0.4f;
+
+    private final float SERVO_OPEN = 50/255f;
+    private final float SERVO_CLOSE = 150/255f;
+
+    Servo hypotheticalServo = hardwareMap.get(Servo.class, "servo");
 
     @Override
     public void init() {
@@ -64,6 +72,8 @@ public class MecanumTeleOp_Neil extends OpMode {
 
         if (gamepad1.b && tank.canPress(timestamp)) tankMode = !tankMode;
 
+        if (gamepad2.x && servo.canPress(timestamp)) servoOpen = !servoOpen;
+
         if (tankMode) {
             drive.setPower(-y1, y2);
 
@@ -77,6 +87,8 @@ public class MecanumTeleOp_Neil extends OpMode {
             }
         }
     }
+
+    //hypotheticalServo.setPosition(servoOpen? SERVO_OPEN : SERVO_CLOSE);
 
     @Override
     public void stop() {
