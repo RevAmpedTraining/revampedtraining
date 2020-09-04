@@ -28,8 +28,7 @@ public class EkanshSquareAuto extends LinearOpMode {
 
         waitForStart();
 
-        driveWithEncoder(0.5f, 10);
-
+        driveWithEncoder(0.6f, 10);
     }
 
     public void driveStraight(double power){
