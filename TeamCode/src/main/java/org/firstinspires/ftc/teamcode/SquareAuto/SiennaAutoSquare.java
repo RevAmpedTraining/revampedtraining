@@ -11,4 +11,13 @@ public class SiennaAutoSquare extends OpMode {
     public DcMotor driveLB;
 
 
+    @Override
+    public void init() {
+
+    }
+
+    @Override
+    public void loop() {
+
+    }
 }

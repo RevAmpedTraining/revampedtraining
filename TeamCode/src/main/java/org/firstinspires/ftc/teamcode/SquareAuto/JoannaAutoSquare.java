@@ -12,6 +12,9 @@ public class JoannaAutoSquare extends OpMode {
     public DcMotor driveLF;
     public DcMotor driveLB;
 
+    int loop = 0;
+
+
     // assigning the variables
     public void init (){
         driveRF = hardwareMap.get (DcMotor.class, "rf");
@@ -38,15 +41,15 @@ public class JoannaAutoSquare extends OpMode {
     }
 
     //this function causes the robot to loop and make a square
+
     public void loop() {
-        int loop = 0;
-        while(loop< 4) {
+        if (loop < 4) {
             DriveForward(1);
             //wait (1000);
             DriveLeft(1);
             //wait (1000);
             //adding a number so the loop does not go on infinite
-            loop = loop + 1;
+            loop++;
         }
     }
 

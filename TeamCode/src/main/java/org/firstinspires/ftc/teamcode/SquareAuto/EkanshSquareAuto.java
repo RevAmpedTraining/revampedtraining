@@ -27,6 +27,9 @@ public class EkanshSquareAuto extends LinearOpMode {
         driverb.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         waitForStart();
+
+        driveWithEncoder(0.5f, 10);
+
     }
 
     public void driveStraight(double power){
