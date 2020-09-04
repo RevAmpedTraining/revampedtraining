@@ -1,2 +1,2 @@
 # revampedtraining
-Training RevAmped programmers
+Past RevAmped base code to train new programmers
