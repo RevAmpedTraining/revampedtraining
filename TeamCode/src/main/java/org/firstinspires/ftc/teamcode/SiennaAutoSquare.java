@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-public class SiennaSimpleAuto extends LinearOpMode {
+public class SiennaAutoSquare extends LinearOpMode {
     private DcMotor motor;
 
     @Override
