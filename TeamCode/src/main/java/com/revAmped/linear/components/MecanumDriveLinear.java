@@ -188,6 +188,7 @@ public class MecanumDriveLinear
 
             int average = ((int)Math.signum(tick))*getEncoder();
             int delta = tick - average;
+
             if (Math.abs(delta) < 30)
             {
                 // done
