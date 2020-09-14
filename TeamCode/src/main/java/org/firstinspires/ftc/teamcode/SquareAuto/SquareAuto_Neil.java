@@ -40,7 +40,7 @@ public class SquareAuto_Neil extends OpMode {
 
     }
 
-    //this function causes the robot to loop and make a square
+    // Loop the actions of moving forward and turning...
     public void loop() {
         int loop = 1;
         while(loop <= 4) {
